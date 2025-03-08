@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    background-color: #ca05ca;
+    gap: 30px;
+}
+
+.heart {
+    height: 100px;
+    width: 100px;
+    background: #faf9f9;
+    position: center;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f8f7f7;
+    animation: heart 4s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(1.1);
+    }
+    50% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.95);
+    }
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: #fdfcfc;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -50px;
+    left: 0;
+}
+
+.heart:after {
+    left: 50px;
+    top: 0;
+}
+
+
+/* Botão abaixo do coração */
